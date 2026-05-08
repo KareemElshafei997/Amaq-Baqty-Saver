@@ -26,6 +26,6 @@ function injectScript() {
 
     const script = document.createElement('script');
     script.id = 'amaq-youtube-injector';
-    script.src = chrome.runtime.getURL('inject_youtube.js');
+    script.src = chrome.runtime.getURL('scripts/inject_youtube.js');
     (document.head || document.documentElement).appendChild(script);
 }
