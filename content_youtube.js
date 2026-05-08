@@ -1,15 +1,15 @@
 let isExtensionEnabled = true;
 
-chrome.storage.local.get(['isEnabled'], (result) => {
-    isExtensionEnabled = result.isEnabled !== false;
+chrome.storage.local.get(['isYoutubeEnabled'], (result) => {
+    isExtensionEnabled = result.isYoutubeEnabled !== false;
     if (isExtensionEnabled) {
         injectScript();
     }
 });
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
-    if (namespace === 'local' && changes.isEnabled !== undefined) {
-        isExtensionEnabled = changes.isEnabled.newValue;
+    if (namespace === 'local' && changes.isYoutubeEnabled !== undefined) {
+        isExtensionEnabled = changes.isYoutubeEnabled.newValue;
         if (isExtensionEnabled) {
             injectScript();
         } else {

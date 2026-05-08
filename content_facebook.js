@@ -1,15 +1,15 @@
 let isExtensionEnabled = true;
 
-chrome.storage.local.get(['isEnabled'], (result) => {
-    isExtensionEnabled = result.isEnabled !== false;
+chrome.storage.local.get(['isFacebookEnabled'], (result) => {
+    isExtensionEnabled = result.isFacebookEnabled !== false;
     if (isExtensionEnabled) {
         preventFacebookAutoplay();
     }
 });
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
-    if (namespace === 'local' && changes.isEnabled !== undefined) {
-        isExtensionEnabled = changes.isEnabled.newValue;
+    if (namespace === 'local' && changes.isFacebookEnabled !== undefined) {
+        isExtensionEnabled = changes.isFacebookEnabled.newValue;
         if (isExtensionEnabled) {
             preventFacebookAutoplay();
         } else {

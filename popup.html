@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <title>أعماق باقة سيفير</title>
+    <title>Amaq-Baqty-Saver</title>
     <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
+    <div id="update-banner" class="hidden">
+        يوجد تحديث جديد! 🎉 <br> <a href="https://github.com/KareemElshafei997/Amaq-Baqty-Saver" target="_blank">اضغط
+            هنا لتحميل التحديث</a>
+    </div>
+
     <div class="container">
         <img src="icon.png" alt="شعار أعماق" class="logo">
-        <h2>أعماق باقة سيفير</h2>
+        <h2>Amaq-Baqty-Saver</h2>
+        <div class="version-badge">إصدار <span id="app-version">1.0.2</span></div>
         <p class="description">أداة لتوفير استهلاك بيانات الإنترنت على يوتيوب وفيسبوك.</p>
-        
-        <div class="toggle-container">
-            <label class="switch">
-                <input type="checkbox" id="toggle-extension">
-                <span class="slider round"></span>
-            </label>
-            <span id="status-text">جاري التحقق...</span>
+
+        <div class="toggles-wrapper">
+            <!-- Master Toggle -->
+            <div class="toggle-container master-toggle">
+                <span class="platform-name" style="color: #00d2ff;">تفعيل الكل (يوتيوب وفيسبوك)</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-master">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="toggle-container">
+                <span class="platform-name">توفير يوتيوب (144p)</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-youtube">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="toggle-container">
+                <span class="platform-name">توفير فيسبوك (إيقاف تلقائي وتقليل جودة)</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-facebook">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
 
         <div class="footer">
-            <p>مطورة بواسطة <br> <span class="brand-name">أعماق للتكنولوجيا المعلومات</span></p>
+            <p>مطورة بواسطة <br> 
+               <a href="https://a-amaq.com" target="_blank" class="brand-name" style="text-decoration: none;">أعماق للتكنولوجيا المعلومات</a><br>
+               <a href="https://a-amaq.com" target="_blank" style="color: #00d2ff; text-decoration: none; font-weight: bold; font-size: 13px;">a-amaq.com</a>
+            </p>
         </div>
     </div>
     <script src="popup.js"></script>
 </body>
+
 </html>
