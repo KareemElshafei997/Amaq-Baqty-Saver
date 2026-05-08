@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "أعماق باقة سيفير (Amaq Baqty Saver)",
   "version": "1.0.0",
-  "description": "توفير استهلاك بيانات الإنترنت من خلال التحكم في فيديوهات يوتيوب وفيسبوك. مطورة بواسطة أعماق لتكنولوجيا المعلومات.",
-  "author": "أعماق لتكنولوجيا المعلومات",
+  "description": "توفير استهلاك بيانات الإنترنت من خلال التحكم في فيديوهات يوتيوب وفيسبوك. مطورة بواسطة أعماق للتكنولوجيا المعلومات.",
+  "author": "أعماق للتكنولوجيا المعلومات",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -27,20 +27,32 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["content_youtube.js"],
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content_youtube.js"
+      ],
       "run_at": "document_end"
     },
     {
-      "matches": ["*://*.facebook.com/*"],
-      "js": ["content_facebook.js"],
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "content_facebook.js"
+      ],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["inject_youtube.js"],
-      "matches": ["*://*.youtube.com/*"]
+      "resources": [
+        "inject_youtube.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
     }
   ]
 }
