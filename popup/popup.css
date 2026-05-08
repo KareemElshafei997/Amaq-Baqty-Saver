@@ -77,6 +77,7 @@ h2 {
     justify-content: space-between;
     padding: 15px 0;
     border-bottom: 1px solid #f1f5f9;
+    gap: 15px;
 }
 
 .toggle-container:last-child {
@@ -102,6 +103,7 @@ h2 {
   display: inline-block;
   width: 50px;
   height: 26px;
+  flex-shrink: 0;
 }
 
 /* Hide default HTML checkbox */
